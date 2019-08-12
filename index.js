@@ -1,9 +1,10 @@
 function priceCalculator(books){
-    if(books.length>0){
-        for (let index = 0; index < array.length; index++) {
-            const element = array[index];
+    if(books.length==2){
+        for (let i = 0; i < books.length; i++) {
             
         }
+    }else if(books.length==1){
+        return 8 * books[0];
     }
     return null;
 }
