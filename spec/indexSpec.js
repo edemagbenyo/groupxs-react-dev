@@ -44,7 +44,20 @@ describe('Book Price Calculator',function(){
 
     describe('Different book that form a set with additional books',function(){
         it('should calculate price of 2 books',function(){
-            // expect(priceCalculator([1,2])).toEqual(23.2);
+            expect(priceCalculator([1,2])).toEqual(23.2);
+            expect(priceCalculator([2,1])).toEqual(23.2);
+        })
+        it('should calculate price of 3 books',function(){
+            expect(priceCalculator([2,1,1])).toEqual(29.6);
+            expect(priceCalculator([3,2,1])).toEqual(44.8);
+        })
+        it('should calculate price of 4 books',function(){
+            expect(priceCalculator([2,1,1,4])).toEqual(56.8);
+            expect(priceCalculator([3,2,1,1])).toEqual(48.8);
+        })
+        it('should calculate price of 5 books',function(){
+            expect(priceCalculator([2,2,2,1,1])).toEqual(51.6);
+            expect(priceCalculator([3,2,2,1,1])).toEqual(59.6);
         })
     })
     
